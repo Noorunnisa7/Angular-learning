@@ -1,0 +1,66 @@
+
+
+<h2>{{name}}</h2>
+<h2>{{pass}}</h2>
+
+
+<p>{{Data()}}</p>
+
+
+@if(isLogin){
+  <p>User logged In</p>
+}
+
+
+<!-- (event)="Method()" -->
+<button (click)="login()">lOGIN</button>
+<button (click)="logout()">logout</button>
+
+<h3>{{users[0]}}</h3>
+
+<!-- For of  -->
+<ul>
+@for(user of users; track user){
+  <li>{{user}}</li>
+}
+</ul>
+
+
+<ul>
+@for(n of number; track n){
+  <li>{{n}}</li>
+}
+</ul>
+
+<p>{{userData.id}}</p>
+<p>{{userData.name}}</p>
+<p>{{userData.age}}</p>
+
+
+<p>
+  {{students[0].id}}
+  | 
+  {{students[0].name}}
+</p>
+
+
+<ul>
+@for(student of students; track student){
+  <li>{{student.id}}</li>
+  <li>{{student.name}}</li>
+
+}
+</ul>
+
+<!-- ngFor -->
+
+<table border="1">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+  <tr *ngFor="let s of students">
+    <td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+  </tr>
+</table>
