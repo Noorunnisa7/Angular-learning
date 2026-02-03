@@ -1,0 +1,25 @@
+<h1>Interpolation {{name}}</h1>
+
+<!-- Event Binding -->
+<!-- <button (event)="function()"></button> -->
+
+<h1>Property binding</h1>
+<!-- Property Binding -->
+ <input type="text" [value]="message" >
+
+
+ <h1>Event Binding</h1>
+
+
+ <input type="text" #txt (keyup)="ChangeData(txt.value)">
+ <p>{{mytext}}</p>
+
+ <button (click)="UpdateData()">Update Text</button>
+
+
+ <!-- Two way data Binding  -->
+  <!-- ng -->
+<h2>Two way data binding</h2>
+  <input [(ngModel)]="language">
+
+  {{language}}
