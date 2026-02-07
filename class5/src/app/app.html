@@ -1,0 +1,30 @@
+<h1>
+  {{mytitle}}
+</h1>
+
+<h2>{{mytitle | uppercase}}</h2>
+<h2>{{mytitle | lowercase}}</h2>
+<h2>{{mytitle | titlecase}}</h2>
+
+<p>{{dateofbirth | date}}</p>
+<p>{{dateofbirth | date: 'fullDate' | uppercase}}</p>
+<p>{{dateofbirth | date: 'hh:mm:ss'}}</p>
+
+<h4>
+  {{amount | currency}}
+</h4>
+
+<h4>
+  {{amount | currency:'GBP'}}
+</h4>
+<h4>
+  {{amount | currency:'EUR'}}
+</h4>
+
+
+<h1>Custom Pipe</h1>
+<p>{{number | custom}}</p>
+<p>{{500 | custom:54}}</p>
+<p>{{400 | custom:54:12}}</p>
+
+
