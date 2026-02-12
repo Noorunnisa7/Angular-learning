@@ -11,7 +11,4 @@ import { AddUser } from './add-user/add-user';
 })
 export class App {
   protected readonly title = signal('class6');
-
-
-
 }

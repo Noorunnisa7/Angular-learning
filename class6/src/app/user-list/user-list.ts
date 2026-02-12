@@ -3,7 +3,7 @@ import { PersonService, Person} from '../person-service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-user-list',
-  imports: [CommonModule],
+  imports: [CommonModule ],
   standalone:true,
   templateUrl: './user-list.html',
   styleUrl: './user-list.css',
@@ -11,8 +11,12 @@ import { CommonModule } from '@angular/common';
 export class UserList {
 
   persons: Person[] = [];
-
+  index = 0;
   constructor(private personService:PersonService){
     this.persons = this.personService.getPerson();
+  }
+
+  Delete(index:number){
+     this.personService.removePerson(index)
   }
 }

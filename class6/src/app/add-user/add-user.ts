@@ -17,16 +17,12 @@ export class AddUser {
 
   }
 
-  person:Person[] = []
-
-
   submit(){
-    // this.person = []
-    this.personService.addPerson([{
+    this.personService.addPerson({
       name: this.name,
       age:this.age,
       contact: this.contact
-    }])
+    })
    alert("data inserted Succussfully")
    
    console.log(this.name,this.age,this.contact)

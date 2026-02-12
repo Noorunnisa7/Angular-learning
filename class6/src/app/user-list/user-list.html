@@ -1,16 +1,17 @@
 <p>user-list works!</p>
 
 
-<table>
+<table border="1">
   <tr>
     <th>Name</th>
     <th>Age</th>
     <th>Contact</th>
   </tr>
-  <tr *ngFor="let person of persons">
+  <tr *ngFor="let person of persons; let i = index;">
     <td>{{person.name}}</td>
     <td>{{person.age}}</td>
     <td>{{person.contact}}</td>
+    <td>Edit | <button (click)="Delete(i)">Delete</button></td>
   </tr>
 
 </table>

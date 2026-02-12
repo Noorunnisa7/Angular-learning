@@ -10,12 +10,21 @@ export interface Person{
 export class PersonService {
   persons:Person[] = [];
 
-  addPerson(p:any){
+  addPerson(p:Person){     // push
     this.persons.push(p)
   }
 
   getPerson(){
-    return this.persons;
+    return this.persons;   // fetch
+  }
+
+  removePerson(index:number){
+      this.persons.splice(index,1)
+      
+  }
+
+  editPerson(index:number ,p:Person){
+    this.persons[index] = p
   }
   
 }
